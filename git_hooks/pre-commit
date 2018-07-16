@@ -1,0 +1,6 @@
+#! /bin/bash
+
+git diff --cached --name-only | grep ".php$" | grep -v "^vendor/" | awk '{cmd="phpcbf "$0;system(cmd)}'
+
+git diff --cached --name-only | grep ".php$" | grep -v "^vendor/" | php -l
+
