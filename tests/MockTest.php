@@ -4,7 +4,7 @@ class MockTest extends \PHPUnit\Framework\TestCase
 {
     public function testMock()
     {
-        require_once __DIR__ . '/stubs/Foo.php';
+        include_once __DIR__ . '/stubs/Foo.php';
 
         $behaviors = (new \Lxj\OneStepMock\Behaviors())->addOne(
             'test',
