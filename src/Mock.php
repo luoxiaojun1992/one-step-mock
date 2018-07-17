@@ -44,6 +44,7 @@ class Mock
             }
             foreach ($properties as $property_name => $property_value) {
                 $behaviors->addOne('__get', [$property_name], $property_value);
+                $mock_obj->$property_name = $property_value;
             }
         }
 
